@@ -1,5 +1,89 @@
 @unocss all;
 
-.test {
-  @apply text-blue;
+* {
+  @apply m0 p0;
 }
+
+html {
+  @apply bg-puccin-base;
+}
+
+.header {
+  @apply bg-puccin-mantle bg-opacity-80 p4;
+  @apply shadow-lg sticky top-0 z-100;
+  @apply backdrop-blur-4;
+}
+
+.nav {
+  @apply flex flex-row;
+}
+
+main {
+  @apply h-7xl;
+}
+
+.me {
+  @apply flex items-center;
+  @apply text-2xl font-alata decoration-none;
+  @apply hover:text-puccin-blue transition-colors ease-in-out duration-300;
+}
+
+.change-to-gradient {
+  @apply text-transparent bg-clip-text;
+  @apply bg-gradient-to-r from-puccin-red via-puccin-green to-puccin-blue;
+  animation: move_gradient 3s linear infinite;
+  background-size: 400%;
+}
+
+a {
+  @apply text-white decoration-transparent hover:decoration-puccin-blue underline-2 underline-offset-2;
+  @apply transition-colors ease-in-out duration-300;
+}
+
+
+.nav-list {
+  @apply flex flex-row list-none gap-3 text-lg font-jetbrains;
+  
+  li {
+    @apply flex items-center h-full;
+  }
+}
+
+.introduction {
+  @apply text-white font-alata;
+  @apply flex flex-col gap-4;
+  @apply mx-4 my-8 px-4 py-8;
+  h1 {
+    @apply text-3xl;
+  }
+  section {
+    @apply text-lg flex flex-col gap-2;
+    .age {
+      @apply text-puccin-teal;
+    }
+    .object-of-importance {
+      @apply underline-solid underline underline-2 underline-offset-2 decoration-puccin-blue;
+    }
+  }
+}
+
+.heart {
+  @apply text-puccin-red;
+}
+
+footer {
+  @apply p4;
+  @apply bg-puccin-mantle;
+  @apply text-white font-alata;
+  @apply flex flex-col justify-center items-center;
+  ol {
+   @apply list-none text-center;
+  }
+}
+
+@keyframes move_gradient {
+  0%, to { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+

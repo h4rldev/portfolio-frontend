@@ -9,18 +9,72 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ol>
-        <li><a href="/"> h4rl </a></li>
-        <li></li>
+  <header class="header">
+    <nav class="nav">
+      <a class="me change-to-gradient" href="/"> h4rl </a>
+      <ol class="nav-list">
+        <li><a href="/blog"> blog </a></li>
+        <li><a href="/projects"> projects </a></li>
+        <li><a href="/cv"> cv/resume </a></li>
       </ol>
     </nav>
   </header>
   <main>
+    <section class="introduction">
+      <h1> Hi, I'm <span class="change-to-gradient"> h4rl </span> </h1>
+      <section>
+        <p>
+          A(n) <span id="age" class="age"></span> soon <span id="soon_age" class="age"></span> year old <span
+            class="object-of-importance">IT Enthusiast</span> &
+          <span class="object-of-importance">Software Developer</span> based
+          in Sweden
+          &#127480;&#127466;
+        </p>
+
+        <script nonce="Y9hZPQrVBZhw6dFMaWf2oQ">
+          "use strict";
+          const birth_date = new Date('2005-09-02');
+          function getYearsBetweenDates(targetDate) {
+            const now = new Date();
+            const diffDays = Math.floor((now - targetDate) / (1000 * 60 * 60 * 24));
+            const avgYearLength = 365.25; // Accounts for leap years
+            return Math.floor(diffDays / avgYearLength);
+          }
+          const age = getYearsBetweenDates(birth_date);
+          let age_element = document.getElementById('age');
+          let soon_age_element = document.getElementById('soon_age');
+
+          age_element.innerText = age;
+          soon_age_element.innerText = age + 1;
+        </script>
+
+        <p> I have a soft spot for <span class="object-of-importance">Native Software Development</span>,
+          <br />especially
+          cross-platform, but I also dabble in <span class="object-of-importance">Web
+            Development</span>.
+        </p>
+
+        <p> I'm also interested in <span class="object-of-importance">PC Assembling & Repair</span> aswell as <span
+            class="object-of-importance"> Electronic Assembling & Repair</span> having experience in both.
+        </p>
+
+      </section>
+    </section>
   </main>
   <footer>
-
+    <ol>
+      <li>
+        <p> Made with <span class="heart"> &#10084; </span> by <span class="change-to-gradient"> h4rl </span>
+        </p>
+      </li>
+      <li>
+        <p> All my projects are dedicated to <span class="change-to-gradient">K</span> <span class="heart"> &#10084;
+          </span></p>
+      </li>
+      <li>
+        <p> This website is <a href="https://github.com/h4rldev/portfolio" target="_blank">open source</a>. </p>
+      </li>
+    </ol>
   </footer>
 </body>
 
