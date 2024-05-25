@@ -1,8 +1,12 @@
-default:
+@default:
   just --list
 
-just watch:
+@watch:
   pnpm run dev
 
-just build:
+@build:
   pnpm run build
+
+@dev:
+  chmod +x ./portfolio-bin
+  ./portfolio-bin
