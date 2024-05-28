@@ -2,27 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> h4rl </title>
-  <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" href="../assets/me.webp" as="image" type="image/webp" />
+
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+  <meta name="title" content="h4rl | home" />
+  <meta name="description" content="h4rl's portfolio | home" />
+  <meta name="keywords" content="h4rl, portfolio, html, css, js, h4rldev, h4rl.みんな, developer, rust, c">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="h4rl.xn--q9jyb4c" />
+  <meta property="og:title" content="h4rl | home" />
+  <meta property="og:description" content="h4rl's portfolio | home" />
+  <meta property="og:image" content="../assets/preview.webp" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="h4rl.xn--q9jyb4c" />
+  <meta property="twitter:title" content="h4rl | home" />
+  <meta property="twitter:description" content="h4rl's portfolio | home" />
+  <meta property="twitter:image" content="../assets/preview.webp" />
+
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/webp" href="../assets/gat.webp" />
+  <link rel="canonical" href="https://h4rl.xn--q9jyb4c" />
+  <title> h4rl | home </title>
 </head>
 
 <body>
   <header class="header">
     <nav class="nav">
-      <a class="me change-to-gradient" href="/"> h4rl </a>
+      <a class="me change-to-gradient special-link" href="/"> h4rl </a>
       <ol class="nav-list">
-        <li><a class="gradient-link" href="/blog">blog</a></li>
-        <li><a class="gradient-link" href="/projects">projects</a></li>
-        <li><a class="gradient-link" href="/cv">cv/resume</a></li>
+        <li><a class="hyperlink" href="/blog">blog</a></li>
+        <li><a class="hyperlink" href="/projects">projects</a></li>
+        <li><a class="hyperlink" href="/cv">cv/resume</a></li>
       </ol>
     </nav>
   </header>
   <main>
     <section class="text-and-image">
       <section class="introduction">
-        <h1> Hi, I'm <span class="change-to-gradient"> h4rl </span> </h1>
+        <section class="identity">
+          <h1> Hi, I'm <span class="change-to-gradient"> h4rl </span> </h1>
+          <p class="also-known"> Also known as <span class="change-to-gradient"> Oscar Sjödin Jansson. </span></p>
+        </section>
         <section class="about-me">
           <p>
             A(n) <span id="age" class="age"></span> soon <span id="soon_age" class="age"></span> year old <span
@@ -52,16 +78,27 @@
           <p> With a soft spot for <span class="object-of-importance">Native Software Development</span>,
             <br />especially
             cross-platform, but I also dabble in <span class="object-of-importance">Web
-              Development</span>.
+              Development</span>. <br />
+            Not much of a Designer though, more of a <span class="object-of-importance">Backend Developer</span> type of
+            person.
           </p>
 
           <p> I'm also interested in <span class="object-of-importance">PC Assembling & Repair</span> and <br /> <span
               class="object-of-importance"> Electronic Assembling & Repair</span> having experience in both.
           </p>
         </section>
+      </section>
+      <section class="image-container">
+        <img src="../assets/me.webp" alt="A picture of me" />
+        <p> <span class="change-to-gradient font-alata">Me</span> :) </p>
+      </section>
+    </section>
+    <hr id="skills" />
+    <section class="skills">
+      <h1> <a href="#skills" class="special-link" target="_self">#</a> My Skills </h2>
         <section class="stuffs">
           <section class="languages">
-            <h3> Languages </h3>
+            <h3>Languages</h3>
             <ol class="language-list">
               <li>
                 <a href="https://en.wikipedia.org/wiki/The_C_Programming_Language" target="_blank">
@@ -81,6 +118,11 @@
               <li>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                   <div class="css-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://sass-lang.com" target="_blank">
+                  <div class="sass-icon"></div>
                 </a>
               </li>
               <li>
@@ -109,6 +151,11 @@
                 </a>
               </li>
               <li>
+                <a href="https://unocss.dev" target="_blank">
+                  <div class="unocss-icon"></div>
+                </a>
+              </li>
+              <li>
                 <a href="https://pnpm.io/" target="_blank">
                   <div class="pnpm-icon"></div>
                 </a>
@@ -128,20 +175,137 @@
                   <div class="docker-icon"></div>
                 </a>
               </li>
+              <li>
+                <a href="https://neovim.io" target="_blank">
+                  <div class="neovim-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://git-scm.com" target="_blank">
+                  <div class="git-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com" target="_blank">
+                  <div class="github-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://git.h4rl.xn--qojyb4c" target="_blank">
+                  <div class="forgejo-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.gnu.org/software/bash" target="_blank">
+                  <div class="bash-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.zsh.org" target="_blank">
+                  <div clasS="zsh-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://hetzner.com" target="_blank">
+                  <div class="hetzner-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://linuxfoundation.org" target="_blank">
+                  <div class="linux-icon"></div>
+                </a>
+              </li>
             </ol>
           </section>
         </section>
-      </section>
-      <section class="image-container">
-        <img src="../assets/me.webp" alt="A picture of me" />
-        <p> Me :) </p>
-      </section>
+    </section>
+    <hr />
+    <section class="certificates">
+      <h1 id="certificates"> <a href="#certificates" class="special-link" target="_self">#</a> My Certificates</h1>
+      <ol class="certificate-list">
+        <li>
+          <a href="https://www.credly.com/badges/5008ded4-5ead-4a57-952d-5a9a3331760c/public_url" target="_blank">
+            <img src="../assets/certs/it-specialist-device-configuration-and-management.webp"
+              alt="IT Specialist - Device Configuration and Management Badge" />
+            <p>IT Specialist - Device Configuration and Management</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/badges/195bc135-c1cc-430f-8eb4-5e8bc89a190a/public_url" target="_blank">
+            <img src="../assets/certs/it-specialist-networking.webp" alt="IT Specialist - Networking Badge" />
+            <p>IT Specialist - Networking</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/badges/5a7dfcf8-1df9-49f5-b063-7d3b5babb918/public_url" target="_blank">
+            <img src="../assets/certs/it-specialist-python.webp" alt="IT Specialist - Python Badge" />
+            <p>IT Specialist - Python</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/badges/1d08f7a1-7704-457e-af6c-9a64f78319d3/public_url" target="_blank">
+            <img src="../assets/certs/cisco-certified-support-technician-networking-ccst-.webp"
+              alt="Cisco Certified Support Technician Networking (CCST Networking) Badge" />
+            <p>Cisco Certified Support Technician Networking (CCST Networking)</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/badges/6839873a-98ec-4d05-8d38-acf22377f570/public_url" target="_blank">
+            <img src="../assets/certs/communication-skills-for-business-csb-english-for-it.webp"
+              alt="Communication Skills for Business (CSB) - English for IT Badge" />
+            <p>Communication Skills for Business (CSB) - English for IT</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/badges/74fd7213-7c55-4361-a589-d7168774306e/public_url" target="_blank">
+            <img src="../assets/certs/it-technical-support-specialist.webp"
+              alt="IT Technical Support Specialist Badge" />
+            <p>IT Technical Support Specialist</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/badges/ed825b6d-1a88-4869-9550-318a0be0d10b/public_url" target="_blank">
+            <img src="../assets/certs/it-specialist-network-security.webp"
+              alt="IT Specialist - Network Security Badge" />
+            <p>IT Specialist - Network Security</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/badges/62226f0d-4c3a-4c80-9b86-a0e613aeab9a/public_url" target="_blank">
+            <img src="../assets/certs/cisco-certified-support-technician-cybersecurity-cc.webp"
+              alt="Cisco Certified Support Technician Cybersecurity (CCST Cybersecurity) Badge" />
+            <p>Cisco Certified Support Technician Cybersecurity (CCST Cybersecurity)</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/badges/6c5fd3c3-e088-42d1-af37-308fe294f782/public_url" target="_blank">
+            <img src="../assets/certs/it-specialist-software-development.webp"
+              alt="IT Specialist - Software Development Badge" />
+            <p>IT Specialist - Software Development</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/badges/0b90f094-8fcc-4440-b9c1-4f5aef14d768/public_url" target="_blank">
+            <img src="../assets/certs/network-security-support-technician.webp"
+              alt="Network Security Support Technician Badge" />
+            <p>Network Security Support Technician</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/badges/f3949a98-2ce1-4296-8c08-d1fc734b3b79/public_url" target="_blank">
+            <img src="../assets/certs/network-automation-specialist.webp" alt="Network Automation Specialist Badge" />
+            <p>Network Automation Specialist</p>
+          </a>
+        </li>
+      </ol>
     </section>
   </main>
   <footer>
     <ol>
       <li>
-        <p> Made with <span class="heart"> &#10084; </span> by <span class="change-to-gradient"> h4rl </span>
+        <p> Made with <span class="heart"> &#10084;
+          </span> by <a href="https://github.com/h4rldev" class="change-to-gradient special-link" target="_blank"> h4rl
+          </a>
         </p>
       </li>
       <li>
@@ -149,7 +313,7 @@
           </span></p>
       </li>
       <li>
-        <p> This website is <a class="gradient-link" href="https://github.com/h4rldev/portfolio" target="_blank">open
+        <p> This website is <a class="hyperlink" href="https://github.com/h4rldev/portfolio" target="_blank">open
             source</a>. </p>
       </li>
     </ol>

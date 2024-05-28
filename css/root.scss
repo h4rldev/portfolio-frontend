@@ -4,12 +4,20 @@
   @apply m0 p0;
 }
 
+a {
+  @apply text-puccin-text;
+}
+
 html {
   @apply bg-puccin-base;
 }
 
+hr {
+  @apply border-0 w-[97%] my-4 rounded-2xl h-2 bg-puccin-mantle;
+}
+
 .header {
-  @apply bg-puccin-mantle bg-opacity-80 p4 w-screen;
+  @apply bg-puccin-mantle bg-opacity-80 p4 max-w-screen;
   @apply border-solid border-r-0 border-l-0 border-t-0 border-b-2 border-puccin-crust sticky top-0 z-100;
   @apply border-rd-br-4 border-rd-bl-4;
   @apply backdrop-blur-4;
@@ -22,7 +30,6 @@ html {
 .me {
   @apply flex items-center;
   @apply text-2xl font-alata decoration-none;
-  @apply hover:text-puccin-blue transition-colors ease-in-out duration-300;
 }
 
 .change-to-gradient {
@@ -32,11 +39,14 @@ html {
   background-size: 400%;
 }
 
-a {
-  @apply text-white decoration-puccin-blue hover:decoration-puccin-teal underline-2 underline-offset-2;
+.hyperlink {
+  @apply text-white decoration-puccin-blue hover:decoration-puccin-pink underline-2 underline-offset-2;
   @apply transition-colors ease-in-out duration-300;
 }
 
+.special-link {
+  @apply hover:text-puccin-blue transition-colors ease-in-out duration-300 decoration-none;
+}
 
 .nav-list {
   @apply flex flex-row list-none gap-3 text-lg font-jetbrains;
@@ -47,13 +57,15 @@ a {
 }
 
 main {
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col justify-center items-center max-w-screen;
 }
 
 .text-and-image {
-  @apply flex flex-row portrait:flex-col justify-between size-fit portrait:gap-8;
+  @apply flex landscape:w-[45%] portrait:max-w-screen flex-row portrait:items-center landscape:justify-between gap-8;
+  @apply p8 m8;
   .image-container {
-    @apply landscape:p4 landscape:m4 rounded-xl bg-puccin-mantle border-2 border-solid border-puccin-crust landscape:w-96 portrait:w-fit flex flex-col gap-2 font-alata text-white;
+    @apply p4 rounded-xl bg-puccin-mantle border-2 border-solid border-puccin-crust landscape:w-96 flex flex-col gap-2 font-alata text-white hover:border-puccin-text;
+    @apply transition-colors ease-in-out duration-300;
     img {
       @apply size-full border-solid border-1 border-puccin-text;
     }
@@ -61,101 +73,210 @@ main {
       @apply inline-block text-center font-jetbrains;
     }
   }
+  .introduction {
+    @apply text-puccin-text font-alata;
+    @apply flex flex-col gap-4 justify-center;
+    .identity {
+      h1 {
+        @apply text-3xl;
+      }
+      p {
+        @apply text-sm;
+      }
+    }
+    .about-me {
+      @apply text-lg flex flex-col gap-8;
+      .age {
+        @apply text-puccin-teal;
+      }
+      .object-of-importance {
+        @apply underline-solid underline underline-2 underline-offset-2 decoration-puccin-red;
+      }
+    }
+  }
 }
 
+.skills {
+  @apply font-alata text-puccin-text landscape:w-[45%] portrait:max-w-screen m8 p8;
+  h1 {
+    @apply mb-4 text-center;
+    @apply text-3xl;
+  }
+}
 
 .stuffs {
-  @apply flex flex-row gap-4 flex-wrap mt-8 portrait:justify-center;
+  @apply flex flex-row gap-4 flex-wrap w-full justify-center;
 }
 
 .languages {
-  @apply inline-flex flex-col gap-2 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p2 text-center;
+  @apply inline-flex flex-col gap-4 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p4 text-center hover:border-puccin-text;
+  @apply transition-colors ease-in-out duration-300;
   .language-list {
-    @apply list-none flex flex-row gap-1;
+    @apply list-none flex flex-row gap-2 flex-wrap justify-center;
   }
   li {
-    @apply transform hover:scale-110 transition-transform duration-300;
+    @apply transform hover:scale-110 transition-transform ease-in-out duration-300;
+  }
+  .c-icon {
+    @apply i-simple-icons:c w-3em h-3em text-puccin-blue;
+  }
+
+  .rust-icon {
+    @apply i-simple-icons:rust w-3em h-3em;
+  }
+
+  .html-icon {
+    @apply i-simple-icons:html5 w-3em h-3em text-puccin-peach;
+  }
+
+  .css-icon {
+    @apply i-simple-icons:css3 w-3em h-3em text-puccin-blue;
+  }
+
+  .sass-icon {
+    @apply i-simple-icons:sass w-3em h-3em text-puccin-pink;
+  }
+
+  .js-icon {
+    @apply i-simple-icons:javascript w-3em h-3em text-puccin-yellow;
+  }
+
+  .ts-icon {
+    @apply i-simple-icons:typescript w-3em h-3em text-puccin-blue;
   }
 }
 
 .frameworks {
-  @apply inline-flex flex-col gap-2 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p2 text-center;
+  @apply inline-flex flex-col gap-4 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p4 text-center hover:border-puccin-text;
+  @apply transition-colors ease-in-out duration-300;
   .frameworks-list {
-    @apply list-none flex flex-row gap-1;
+    @apply list-none flex flex-row gap-2 flex-wrap justify-center;
   }
   li {
-    @apply transform hover:scale-110 transition-transform duration-300;
+    @apply transform hover:scale-110 transition-transform ease-in-out duration-300;
+  }
+
+  .astro-icon {
+    @apply i-simple-icons:astro w-3em h-3em;
+  }
+
+  .svelte-icon {
+    @apply i-simple-icons:svelte w-3em h-3em text-puccin-peach;
+  }
+
+  .unocss-icon {
+    @apply i-simple-icons:unocss w-3em h-3em;
+  }
+
+  .pnpm-icon {
+    @apply i-simple-icons:pnpm w-3em h-3em text-puccin-yellow;
+  }
+
+  .nodejs-icon {
+    @apply i-simple-icons:nodedotjs w-3em h-3em text-puccin-green;
   }
 }
 
 .tools {
-  @apply inline-flex flex-col gap-2 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p2 text-center;
+  @apply inline-flex flex-col gap-4 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p4 text-center hover:border-puccin-text;
+  @apply transition-colors ease-in-out duration-300;
+
   .tools-list {
-    @apply list-none flex flex-row gap-1;
+    @apply list-none flex flex-row gap-2 flex-wrap justify-center;
   }
+  
   li {
-    @apply transform hover:scale-110 transition-transform duration-300;
+    @apply transform hover:scale-110 transition-transform ease-in-out duration-300;
+  }
+
+  .docker-icon {
+    @apply i-simple-icons:docker w-3em h-3em text-puccin-blue;
+  }
+
+  .neovim-icon {
+    @apply i-simple-icons:neovim w-3em h-3em text-puccin-green;
+  }
+
+  .git-icon {
+    @apply i-simple-icons:git w-3em h-3em text-puccin-red;
+  }
+
+  .github-icon {
+    @apply i-simple-icons:github w-3em h-3em;
+  }
+
+  .forgejo-icon {
+    @apply i-simple-icons:forgejo w-3em h-3em text-puccin-red;
+  }
+
+  .bash-icon {
+    @apply i-simple-icons:gnubash w-3em h-3em;
+  }
+
+  .zsh-icon {
+    @apply i-simple-icons:zsh w-3em h-3em;
+  }
+
+  .hetzner-icon {
+    @apply i-simple-icons:hetzner w-3em h-3em text-puccin-red;
+  }
+
+  .linux-icon {
+    @apply i-simple-icons:linux w-3em h-3em;
   }
 }
 
-.c-icon {
-  @apply i-simple-icons:c w-3em h-3em text-puccin-blue;
-}
-
-.rust-icon {
-  @apply i-simple-icons:rust w-3em h-3em;
-}
-
-.html-icon {
-  @apply i-simple-icons:html5 w-3em h-3em text-puccin-peach;
-}
-
-.css-icon {
-  @apply i-simple-icons:css3 w-3em h-3em text-puccin-blue;
-}
-
-.js-icon {
-  @apply i-simple-icons:javascript w-3em h-3em text-puccin-yellow;
-}
-
-.ts-icon {
-  @apply i-simple-icons:typescript w-3em h-3em text-puccin-blue;
-}
-
-.astro-icon {
-  @apply i-simple-icons:astro w-3em h-3em;
-}
-
-.svelte-icon {
-   @apply i-simple-icons:svelte w-3em h-3em text-puccin-peach;
-}
-
-.pnpm-icon {
-  @apply i-simple-icons:pnpm w-3em h-3em text-puccin-yellow;
-}
-
-.nodejs-icon {
-  @apply i-simple-icons:nodedotjs w-3em h-3em text-puccin-green;
-}
-
-.docker-icon {
-  @apply i-simple-icons:docker w-3em h-3em text-puccin-blue;
-}
-
-.introduction {
-  @apply text-white font-alata2 w-screen;
-  @apply flex flex-col gap-4;
-  @apply landscape:p8 landscape:m8;
+.certificates { 
+  @apply font-alata m8 p8;
   h1 {
-    @apply text-3xl;
+    @apply text-3xl text-center text-puccin-text mb4;
   }
-  .about-me {
-    @apply text-lg flex flex-col gap-8 portrait:items-center portrait:justify-center;
-    .age {
-      @apply text-puccin-teal;
+  .certificate-list {
+    @apply list-none flex gap-4 flex-wrap justify-center;
+    li {
+      @apply p4 border-2 border-solid border-puccin-crust bg-puccin-mantle rounded-2xl w-48;
+      @apply hover:border-puccin-text;
+      @apply transition-colors ease-in-out duration-300;
+      a {
+        @apply decoration-transparent;
+        img {
+          @apply size-48 bg-puccin-text rounded-md;
+          @apply transition-colors ease-in-out duration-300;
+        }
+        p {
+          @apply text-center;
+        }
+      }
     }
-    .object-of-importance {
-      @apply underline-solid underline underline-2 underline-offset-2 decoration-puccin-red;
+  }
+}
+
+.notfound {
+  h1 {
+    @apply font-alata text-puccin-text text-3xl p8;
+  }
+  img {
+    @apply w-80;
+  }
+  p {
+    @apply font-alata text-puccin-text text-center w-[80%] break-all p4;
+    span {
+      @apply font-jetbrains;
+    }
+  }
+}
+
+.under-construction {
+  h1 {
+    @apply text-puccin-text font-alata text-3xl p8;
+  }
+  img {
+    @apply w-80;
+  }
+  p {
+    @apply text-puccin-text font-alata text-center p4;
+    span {
+      @apply font-jetbrains;
     }
   }
 }
@@ -165,14 +286,67 @@ main {
 }
 
 footer { 
-  @apply p4 w-screen;
+  @apply p4 max-w-screen;
   @apply bg-puccin-mantle;
-  @apply text-white font-alata;
+  @apply text-puccin-text font-alata;
   @apply border-solid border-r-0 border-l-0 border-t-2 border-b-0 border-puccin-crust;
   @apply border-rd-tr-4 border-rd-tl-4
   @apply flex flex-col justify-center items-center;
   ol {
    @apply list-none text-center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) { 
+  .text-and-image {
+    @apply flex-col;
+    .image-container {
+      @apply w-3/4 h-3/4;
+    }
+  }
+  .certificates {
+    .certificate-list {
+    @apply w-[95%];
+      li {
+        @apply w-[95%];
+        a {
+          @apply flex flex-col justify-center gap-4;
+          img {
+            @apply size-full;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1299px) {
+  .text-and-image {
+    @apply flex-row w-[75%];
+    .image-container {
+      @apply w-96;
+    }
+  }
+  .skills {
+    @apply w-[75%];
+  }
+
+  .certificates {
+    @apply w-[75%];
+  }
+}
+
+@media (min-width: 1300px) {
+  .text-and-image {
+    @apply w-[45%];
+  }
+
+  .skills {
+    @apply w-[45%];
+  }
+
+  .certificates {
+    @apply w-[65%];
   }
 }
 

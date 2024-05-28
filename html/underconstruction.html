@@ -4,31 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="preload" href="https://http.cat/404" as="image" type="image/webp" />
+  <link rel="preload" href="../assets/under-construction.webp" as="image" type="image/webp" />
 
   <link rel="stylesheet" type="text/css" href="../css/style.css" />
 
-  <meta name="title" content="h4rl | 404.. not found?" />
-  <meta name="description" content="h4rl's portfolio | 404.. not found?" />
+  <meta name="title" content="h4rl | under construction" />
+  <meta name="description" content="h4rl's portfolio | under construction" />
   <meta name="keywords" content="h4rl, portfolio, html, css, js, h4rldev, h4rl.みんな, developer, rust, c">
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="h4rl.xn--q9jyb4c" />
   <meta property="og:title" content="h4rl | 404.. not found?" />
-  <meta property="og:description" content="h4rl's portfolio | 404.. not found?" />
-  <meta property="og:image" content="https://http.cat/404" />
+  <meta property="og:description" content="h4rl's portfolio | under construction" />
+  <meta property="og:image" content="../assets/under-construction.webp" />
 
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="h4rl.xn--q9jyb4c" />
-  <meta property="twitter:title" content="h4rl | 404.. not found?" />
-  <meta property="twitter:description" content="h4rl's portfolio | 404.. not found?" />
-  <meta property="twitter:image" content="https://http.cat/404" />
+  <meta property="twitter:title" content="h4rl | under construction" />
+  <meta property="twitter:description" content="h4rl's portfolio | under construction" />
+  <meta property="twitter:image" content="../assets/under-construction.webp" />
 
   <meta name="robots" content="index, follow" />
 
   <link rel="icon" type="image/webp" href="../assets/gat.webp" />
   <link rel="canonical" href="https://h4rl.xn--q9jyb4c" />
-  <title> h4rl | 404.. not found? </title>
+  <title> h4rl | under construction </title>
 </head>
 
 <body>
@@ -42,16 +42,19 @@
       </ol>
     </nav>
   </header>
+  <main class="under-construction">
+    <h1> Under construction </h1>
+    <p> Feel free to check up on <span id="route"> </span> in the future. </p>
 
-  <main class="notfound">
-    <h1> Not found. </h1>
-    <p> No content was found at: <br /> <span id="url"> </span> </p>
     <script nonce="Y9hZPQrVBZhw6dFMaWf2oQ">
-      "use strict";
-      let url = document.getElementById('url');
-      url.innerText = window.location.href;
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentRoute = window.location.pathname;
+        let route = document.getElementById('route');
+        route.innerText = currentRoute;
+      });
     </script>
-    <img src="https://http.cat/404" alt="A picture of a cat hiding with the text 404 not found." />
+
+    <img src="../assets/under-construction.webp" alt="3d gif of carpenters building stuff">
   </main>
 </body>
 
