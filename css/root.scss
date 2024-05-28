@@ -9,17 +9,14 @@ html {
 }
 
 .header {
-  @apply bg-puccin-mantle bg-opacity-80 p4;
-  @apply shadow-lg sticky top-0 z-100;
+  @apply bg-puccin-mantle bg-opacity-80 p4 w-screen;
+  @apply border-solid border-r-0 border-l-0 border-t-0 border-b-2 border-puccin-crust sticky top-0 z-100;
+  @apply border-rd-br-4 border-rd-bl-4;
   @apply backdrop-blur-4;
 }
 
 .nav {
   @apply flex flex-row;
-}
-
-main {
-  @apply h-7xl;
 }
 
 .me {
@@ -36,7 +33,7 @@ main {
 }
 
 a {
-  @apply text-white decoration-transparent hover:decoration-puccin-blue underline-2 underline-offset-2;
+  @apply text-white decoration-puccin-blue hover:decoration-puccin-teal underline-2 underline-offset-2;
   @apply transition-colors ease-in-out duration-300;
 }
 
@@ -49,20 +46,116 @@ a {
   }
 }
 
+main {
+  @apply flex flex-col justify-center items-center;
+}
+
+.text-and-image {
+  @apply flex flex-row portrait:flex-col justify-between size-fit portrait:gap-8;
+  .image-container {
+    @apply landscape:p4 landscape:m4 rounded-xl bg-puccin-mantle border-2 border-solid border-puccin-crust landscape:w-96 portrait:w-fit flex flex-col gap-2 font-alata text-white;
+    img {
+      @apply size-full border-solid border-1 border-puccin-text;
+    }
+    p {
+      @apply inline-block text-center font-jetbrains;
+    }
+  }
+}
+
+
+.stuffs {
+  @apply flex flex-row gap-4 flex-wrap mt-8 portrait:justify-center;
+}
+
+.languages {
+  @apply inline-flex flex-col gap-2 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p2 text-center;
+  .language-list {
+    @apply list-none flex flex-row gap-1;
+  }
+  li {
+    @apply transform hover:scale-110 transition-transform duration-300;
+  }
+}
+
+.frameworks {
+  @apply inline-flex flex-col gap-2 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p2 text-center;
+  .frameworks-list {
+    @apply list-none flex flex-row gap-1;
+  }
+  li {
+    @apply transform hover:scale-110 transition-transform duration-300;
+  }
+}
+
+.tools {
+  @apply inline-flex flex-col gap-2 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p2 text-center;
+  .tools-list {
+    @apply list-none flex flex-row gap-1;
+  }
+  li {
+    @apply transform hover:scale-110 transition-transform duration-300;
+  }
+}
+
+.c-icon {
+  @apply i-simple-icons:c w-3em h-3em text-puccin-blue;
+}
+
+.rust-icon {
+  @apply i-simple-icons:rust w-3em h-3em;
+}
+
+.html-icon {
+  @apply i-simple-icons:html5 w-3em h-3em text-puccin-peach;
+}
+
+.css-icon {
+  @apply i-simple-icons:css3 w-3em h-3em text-puccin-blue;
+}
+
+.js-icon {
+  @apply i-simple-icons:javascript w-3em h-3em text-puccin-yellow;
+}
+
+.ts-icon {
+  @apply i-simple-icons:typescript w-3em h-3em text-puccin-blue;
+}
+
+.astro-icon {
+  @apply i-simple-icons:astro w-3em h-3em;
+}
+
+.svelte-icon {
+   @apply i-simple-icons:svelte w-3em h-3em text-puccin-peach;
+}
+
+.pnpm-icon {
+  @apply i-simple-icons:pnpm w-3em h-3em text-puccin-yellow;
+}
+
+.nodejs-icon {
+  @apply i-simple-icons:nodedotjs w-3em h-3em text-puccin-green;
+}
+
+.docker-icon {
+  @apply i-simple-icons:docker w-3em h-3em text-puccin-blue;
+}
+
 .introduction {
-  @apply text-white font-alata;
+  @apply text-white font-alata2 w-screen;
   @apply flex flex-col gap-4;
-  @apply mx-4 my-8 px-4 py-8;
+  @apply landscape:p8 landscape:m8;
   h1 {
     @apply text-3xl;
   }
-  section {
-    @apply text-lg flex flex-col gap-2;
+  .about-me {
+    @apply text-lg flex flex-col gap-8 portrait:items-center portrait:justify-center;
     .age {
       @apply text-puccin-teal;
     }
     .object-of-importance {
-      @apply underline-solid underline underline-2 underline-offset-2 decoration-puccin-blue;
+      @apply underline-solid underline underline-2 underline-offset-2 decoration-puccin-red;
     }
   }
 }
@@ -71,10 +164,12 @@ a {
   @apply text-puccin-red;
 }
 
-footer {
-  @apply p4;
+footer { 
+  @apply p4 w-screen;
   @apply bg-puccin-mantle;
   @apply text-white font-alata;
+  @apply border-solid border-r-0 border-l-0 border-t-2 border-b-0 border-puccin-crust;
+  @apply border-rd-tr-4 border-rd-tl-4
   @apply flex flex-col justify-center items-center;
   ol {
    @apply list-none text-center;

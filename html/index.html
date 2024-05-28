@@ -13,51 +13,128 @@
     <nav class="nav">
       <a class="me change-to-gradient" href="/"> h4rl </a>
       <ol class="nav-list">
-        <li><a href="/blog"> blog </a></li>
-        <li><a href="/projects"> projects </a></li>
-        <li><a href="/cv"> cv/resume </a></li>
+        <li><a class="gradient-link" href="/blog">blog</a></li>
+        <li><a class="gradient-link" href="/projects">projects</a></li>
+        <li><a class="gradient-link" href="/cv">cv/resume</a></li>
       </ol>
     </nav>
   </header>
   <main>
-    <section class="introduction">
-      <h1> Hi, I'm <span class="change-to-gradient"> h4rl </span> </h1>
-      <section>
-        <p>
-          A(n) <span id="age" class="age"></span> soon <span id="soon_age" class="age"></span> year old <span
-            class="object-of-importance">IT Enthusiast</span> &
-          <span class="object-of-importance">Software Developer</span> based
-          in Sweden
-          &#127480;&#127466;
-        </p>
+    <section class="text-and-image">
+      <section class="introduction">
+        <h1> Hi, I'm <span class="change-to-gradient"> h4rl </span> </h1>
+        <section class="about-me">
+          <p>
+            A(n) <span id="age" class="age"></span> soon <span id="soon_age" class="age"></span> year old <span
+              class="object-of-importance">IT Enthusiast</span> & <span class="object-of-importance">Software
+              Developer</span> <br />
+            based
+            in Karlstad, Sweden
+            &#127480;&#127466;
+          </p>
+          <script nonce="Y9hZPQrVBZhw6dFMaWf2oQ">
+            "use strict";
+            const birth_date = new Date('2005-09-02');
+            function getYearsBetweenDates(targetDate) {
+              const now = new Date();
+              const diffDays = Math.floor((now - targetDate) / (1000 * 60 * 60 * 24));
+              const avgYearLength = 365.25; // Accounts for leap years
+              return Math.floor(diffDays / avgYearLength);
+            }
+            const age = getYearsBetweenDates(birth_date);
+            let age_element = document.getElementById('age');
+            let soon_age_element = document.getElementById('soon_age');
 
-        <script nonce="Y9hZPQrVBZhw6dFMaWf2oQ">
-          "use strict";
-          const birth_date = new Date('2005-09-02');
-          function getYearsBetweenDates(targetDate) {
-            const now = new Date();
-            const diffDays = Math.floor((now - targetDate) / (1000 * 60 * 60 * 24));
-            const avgYearLength = 365.25; // Accounts for leap years
-            return Math.floor(diffDays / avgYearLength);
-          }
-          const age = getYearsBetweenDates(birth_date);
-          let age_element = document.getElementById('age');
-          let soon_age_element = document.getElementById('soon_age');
+            age_element.innerText = age;
+            soon_age_element.innerText = age + 1;
+          </script>
 
-          age_element.innerText = age;
-          soon_age_element.innerText = age + 1;
-        </script>
+          <p> With a soft spot for <span class="object-of-importance">Native Software Development</span>,
+            <br />especially
+            cross-platform, but I also dabble in <span class="object-of-importance">Web
+              Development</span>.
+          </p>
 
-        <p> I have a soft spot for <span class="object-of-importance">Native Software Development</span>,
-          <br />especially
-          cross-platform, but I also dabble in <span class="object-of-importance">Web
-            Development</span>.
-        </p>
-
-        <p> I'm also interested in <span class="object-of-importance">PC Assembling & Repair</span> aswell as <span
-            class="object-of-importance"> Electronic Assembling & Repair</span> having experience in both.
-        </p>
-
+          <p> I'm also interested in <span class="object-of-importance">PC Assembling & Repair</span> and <br /> <span
+              class="object-of-importance"> Electronic Assembling & Repair</span> having experience in both.
+          </p>
+        </section>
+        <section class="stuffs">
+          <section class="languages">
+            <h3> Languages </h3>
+            <ol class="language-list">
+              <li>
+                <a href="https://en.wikipedia.org/wiki/The_C_Programming_Language" target="_blank">
+                  <div class="c-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.rust-lang.org" target="_blank">
+                  <div class="rust-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                  <div class="html-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                  <div class="css-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                  <div class="js-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.typescriptlang.org/" target="_blank">
+                  <div class="ts-icon"></div>
+                </a>
+              </li>
+            </ol>
+          </section>
+          <section class="frameworks">
+            <h3>Frameworks</h3>
+            <ol class="frameworks-list">
+              <li>
+                <a href="https://astro.build" target="_blank">
+                  <div class="astro-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://svelte.dev" target="_blank">
+                  <div class="svelte-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://pnpm.io/" target="_blank">
+                  <div class="pnpm-icon"></div>
+                </a>
+              </li>
+              <li>
+                <a href="https://nodejs.org/" target="_blank">
+                  <div class="nodejs-icon"></div>
+                </a>
+              </li>
+            </ol>
+          </section>
+          <section class="tools">
+            <h3>Tools</h3>
+            <ol class="tools-list">
+              <li>
+                <a href="https://www.docker.com" target="_blank">
+                  <div class="docker-icon"></div>
+                </a>
+              </li>
+            </ol>
+          </section>
+        </section>
+      </section>
+      <section class="image-container">
+        <img src="../assets/me.webp" alt="A picture of me" />
+        <p> Me :) </p>
       </section>
     </section>
   </main>
@@ -72,7 +149,8 @@
           </span></p>
       </li>
       <li>
-        <p> This website is <a href="https://github.com/h4rldev/portfolio" target="_blank">open source</a>. </p>
+        <p> This website is <a class="gradient-link" href="https://github.com/h4rldev/portfolio" target="_blank">open
+            source</a>. </p>
       </li>
     </ol>
   </footer>
