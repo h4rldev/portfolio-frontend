@@ -1,0 +1,80 @@
+@unocss all;
+
+* {
+  @apply m0 p0;
+}
+
+a {
+  @apply text-puccin-text;
+}
+
+html {
+  @apply bg-puccin-base;
+}
+
+hr {
+  @apply border-0 w-[97%] my-4 rounded-2xl h-2 bg-puccin-mantle;
+}
+
+.header {
+  @apply bg-puccin-mantle bg-opacity-80 p4 max-w-screen;
+  @apply border-solid border-r-0 border-l-0 border-t-0 border-b-2 border-puccin-crust sticky top-0 z-100;
+  @apply border-rd-br-4 border-rd-bl-4;
+  @apply backdrop-blur-4;
+  
+  .nav {
+    @apply flex flex-row;
+  }
+
+  .me {
+    @apply flex items-center;
+    @apply text-2xl font-alata decoration-none;
+  }
+  
+.nav-list {
+  @apply flex flex-row list-none gap-3 text-lg font-jetbrains;
+  
+    li {
+      @apply flex items-center h-full;
+    }
+  }
+}
+
+
+.change-to-gradient {
+  @apply text-transparent bg-clip-text;
+  @apply bg-gradient-to-r from-puccin-red via-puccin-green to-puccin-blue;
+  animation: move_gradient 3s linear infinite;
+  background-size: 400%;
+}
+
+.hyperlink {
+  @apply text-white decoration-puccin-blue hover:decoration-puccin-pink underline-2 underline-offset-2;
+  @apply transition-colors ease-in-out duration-300;
+}
+
+.special-link {
+  @apply hover:text-puccin-blue transition-colors ease-in-out duration-300 decoration-none;
+}
+
+.heart {
+  @apply text-puccin-red;
+}
+
+footer { 
+  @apply p4 max-w-screen;
+  @apply bg-puccin-mantle;
+  @apply text-puccin-text font-alata;
+  @apply border-solid border-r-0 border-l-0 border-t-2 border-b-0 border-puccin-crust;
+  @apply border-rd-tr-4 border-rd-tl-4
+  @apply flex flex-col justify-center items-center;
+  ol {
+   @apply list-none text-center;
+  }
+}
+
+@keyframes move_gradient {
+  0%, to { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
