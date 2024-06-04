@@ -1,0 +1,23 @@
+body {
+  @apply h-screen;
+}
+
+main {
+  @apply flex flex-col items-center justify-center text-white font-alata h-[85%];
+  h1 {
+    @apply my-8 text-center;
+  }
+}
+
+.cv-select {
+  @apply list-none flex flex-row gap-4 mb-8;
+  li {
+    @apply flex flex-col justify-center items-center;
+    a {
+      @apply p4 border-2 border-solid border-puccin-crust bg-puccin-mantle flex flex-col justify-center items-center w-24 h-4 rounded-2xl;
+      @apply decoration-none;
+      @apply hover:border-puccin-text;
+      @apply transition-colors ease-in-out duration-300;
+    }
+  }
+}

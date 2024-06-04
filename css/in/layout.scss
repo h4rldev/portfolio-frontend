@@ -61,6 +61,10 @@ hr {
   @apply text-puccin-red;
 }
 
+.object-of-importance {
+  @apply underline-solid underline underline-2 underline-offset-2 decoration-puccin-red;
+}
+
 footer { 
   @apply p4 max-w-screen;
   @apply bg-puccin-mantle;
