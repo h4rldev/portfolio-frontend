@@ -5,10 +5,10 @@ main {
 }
 
 .text-and-image {
-  @apply flex landscape:w-[45%] portrait:max-w-screen flex-row portrait:items-center landscape:justify-between gap-8;
+  @apply flex w-[45%] max-w-screen flex-row items-center justify-between gap-8;
   @apply p8 m8;
   .image-container {
-    @apply p4 rounded-xl bg-puccin-mantle border-2 border-solid border-puccin-crust landscape:w-96 flex flex-col gap-2 font-alata text-white hover:border-puccin-text;
+    @apply p4 rounded-xl bg-puccin-mantle border-2 border-solid border-puccin-crust w-96 flex flex-col gap-2 font-alata text-white hover:border-puccin-text;
     @apply transition-colors ease-in-out duration-300;
     img {
       @apply size-full border-solid border-1 border-puccin-text;
@@ -38,7 +38,7 @@ main {
 }
 
 .skills {
-  @apply font-alata text-puccin-text landscape:w-[45%] portrait:max-w-screen m8 p8;
+  @apply font-alata text-puccin-text w-[45%] max-w-screen m8 p8;
   h1 {
     @apply mb-4 text-center;
     @apply text-3xl;
@@ -194,11 +194,16 @@ main {
 
 @media (min-width: 320px) and (max-width: 767px) { 
   .text-and-image {
-    @apply flex-col;
+    @apply flex-col w-[75%];
     .image-container {
-      @apply w-3/4 h-3/4;
+      @apply w-[95%];
     }
   }
+
+  .skills {
+    @apply w-[75%];
+  }
+
   .certificates {
     .certificate-list {
     @apply w-[95%];
@@ -217,7 +222,7 @@ main {
 
 @media (min-width: 768px) and (max-width: 1299px) {
   .text-and-image {
-    @apply flex-row w-[75%];
+    @apply flex-row w-[85%];
     .image-container {
       @apply w-96;
     }
@@ -227,7 +232,7 @@ main {
   }
 
   .certificates {
-    @apply w-[75%];
+    @apply w-[90%];
   }
 }
 
@@ -241,7 +246,7 @@ main {
   }
 
   .certificates {
-    @apply w-[65%];
+    @apply w-[75%];
   }
 }
 
