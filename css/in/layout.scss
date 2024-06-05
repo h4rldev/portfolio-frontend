@@ -85,8 +85,6 @@ header {
   @apply hover:text-puccin-blue transition-colors ease-in-out duration-300 decoration-none;
 }
 
-
-
 .heart {
   @apply text-puccin-red;
 }
@@ -110,4 +108,16 @@ footer {
 @keyframes move_gradient {
   0%, to { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
+}
+
+@media (min-width: 200px) and (max-width: 380px) {
+  nav {
+    .nav-list {
+      li:last-child {
+        .sub-nav-list {
+          @apply mr-14;
+        }
+      }
+    }
+  }
 }
