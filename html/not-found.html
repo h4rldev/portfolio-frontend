@@ -33,13 +33,21 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="nav">
+  <header>
+    <nav>
       <a class="me change-to-gradient special-link" href="/"> h4rl </a>
       <ol class="nav-list">
         <li><a class="hyperlink" href="/blog">blog</a></li>
         <li><a class="hyperlink" href="/projects">projects</a></li>
-        <li><a class="hyperlink" href="/cv">cv/resume</a></li>
+        <li class="fake-hyperlink">
+          cv/resume
+          <div class="sub-nav">
+            <ol class="sub-nav-list">
+              <li><a class="hyperlink" href="/cv/eng">English</a></li>
+              <li><a class="hyperlink" href="/cv/sv">Swedish</a></li>
+            </ol>
+          </div>
+        </li>
       </ol>
     </nav>
   </header>
