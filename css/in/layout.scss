@@ -19,7 +19,6 @@ hr {
 header {
   @apply bg-puccin-mantle bg-opacity-80 p4 max-w-screen;
   @apply border-solid border-r-0 border-l-0 border-t-0 border-b-2 border-puccin-crust sticky top-0 z-100;
-  @apply border-rd-br-4 border-rd-bl-4;
   @apply backdrop-blur-4;
   
   nav {
@@ -37,7 +36,7 @@ header {
       @apply flex items-center h-full relative z-10;
       
       .sub-nav {
-        @apply absolute -translate-y-14 w-24 flex flex-col justify-center items-center;
+        @apply absolute -translate-un-scale-x: -y-14 w-24 flex flex-col justify-center items-center;
       }
 
       .sub-nav-list {
@@ -69,7 +68,7 @@ header {
   @apply bg-gradient-to-r from-puccin-red via-puccin-green to-puccin-blue;
   animation: move_gradient 3s linear infinite;
   background-size: 400%;
-}
+} 
 
 .hyperlink {
   @apply text-white decoration-puccin-blue hover:decoration-puccin-pink underline-2 underline-offset-2;
@@ -90,7 +89,7 @@ header {
 }
 
 .object-of-importance {
-  @apply underline-solid underline underline-2 underline-offset-2 decoration-puccin-red;
+  @apply underline-solid underline underline-2 underline-offset-2 decoration-puccin-green;
 }
 
 footer { 
@@ -98,7 +97,6 @@ footer {
   @apply bg-puccin-mantle;
   @apply text-puccin-text font-alata;
   @apply border-solid border-r-0 border-l-0 border-t-2 border-b-0 border-puccin-crust;
-  @apply border-rd-tr-4 border-rd-tl-4
   @apply flex flex-col justify-center items-center;
   ol {
    @apply list-none text-center;

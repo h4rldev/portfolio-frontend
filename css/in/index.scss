@@ -8,7 +8,7 @@ main {
   @apply flex w-[45%] max-w-screen flex-row items-center justify-between gap-8;
   @apply p8 m8;
   .image-container {
-    @apply p4 rounded-xl bg-puccin-mantle border-2 border-solid border-puccin-crust w-96 flex flex-col gap-2 font-alata text-white hover:border-puccin-text;
+    @apply p4 rounded-xl bg-puccin-mantle border-2 border-solid border-puccin-crust w-96 flex flex-col gap-2 font-alata text-white;
     @apply transition-colors ease-in-out duration-300;
     img {
       @apply size-full border-solid border-1 border-puccin-text;
@@ -16,6 +16,9 @@ main {
     p {
       @apply inline-block text-center font-jetbrains;
     }
+  }
+  .image-container:hover {
+    @apply border-puccin-text;
   }
   .introduction {
     @apply text-puccin-text font-alata;
@@ -56,8 +59,14 @@ main {
     @apply list-none flex flex-row gap-2 flex-wrap justify-center;
   }
   li {
-    @apply transform hover:scale-110 transition-transform ease-in-out duration-300;
+    @apply transform transition-transform ease-in-out duration-300;
   }
+  
+  //patch for firefox.
+  li:hover {
+    @apply scale-120;
+  }
+  
   .c-icon {
     @apply i-simple-icons:c w-3em h-3em text-puccin-blue;
   }
@@ -94,9 +103,13 @@ main {
     @apply list-none flex flex-row gap-2 flex-wrap justify-center;
   }
   li {
-    @apply transform hover:scale-110 transition-transform ease-in-out duration-300;
+    @apply transform transition-transform ease-in-out duration-300;
   }
-
+  
+  li:hover {
+    @apply scale-120;
+  }
+  
   .astro-icon {
     @apply i-simple-icons:astro w-3em h-3em;
   }
@@ -127,7 +140,11 @@ main {
   }
   
   li {
-    @apply transform hover:scale-110 transition-transform ease-in-out duration-300;
+    @apply transform transition-transform ease-in-out duration-300;
+  }
+
+  li:hover {
+    @apply scale-120;
   }
 
   .docker-icon {
@@ -174,9 +191,13 @@ main {
   }
   .certificate-list {
     @apply list-none flex gap-4 flex-wrap justify-center;
+  
+    li:hover {
+      @apply border-puccin-text;
+    }
+
     li {
       @apply p4 border-2 border-solid border-puccin-crust bg-puccin-mantle rounded-2xl w-48;
-      @apply hover:border-puccin-text;
       @apply transition-colors ease-in-out duration-300;
       a {
         @apply decoration-transparent;
