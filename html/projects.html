@@ -1,182 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="preload" href="/assets/projects/check_elevation.webp" as="image" type="image/webp" />
-  <link rel="preload" href="/assets/projects/discord-rpc-lastfm.webp" as="image" type="image/webp" />
-  <link rel="preload" href="/assets/projects/exmeteo.webp" as="image" type="image/webp" />
-  <link rel="preload" href="/assets/projects/goop-studios.webp" as="image" type="image/webp" />
-  <link rel="preload" href="/assets/projects/password-generator.webp" as="image" type="image/webp" />
-  <link rel="preload" href="/assets/projects/qrcode-analytic.webp" as="image" type="image/webp" />
-  <link rel="preload" href="/assets/projects/yes.webp" as="image" type="image/webp" />
-  <link rel="preload" href="/assets/preview-imgs/index.webp" as="image" type="image/webp" />
-
-
-  <link rel="stylesheet" type="text/css" href="/css/out/layout.css" />
-  <link rel="stylesheet" type="text/css" href="/css/out/projects.css" />
-
-  <meta name="title" content="h4rl | projects" />
-  <meta name="description" content="h4rl's portfolio | projects" />
-  <meta name="keywords" content="h4rl, portfolio, html, css, js, h4rldev, h4rl.みんな, developer, rust, c">
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="h4rl.xn--q9jyb4c" />
-  <meta property="og:title" content="h4rl | projects" />
-  <meta property="og:description" content="h4rl's portfolio | projects" />
-  <meta property="og:image" content="/assets/preview.webp" />
-
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="h4rl.xn--q9jyb4c" />
-  <meta property="twitter:title" content="h4rl | projects" />
-  <meta property="twitter:description" content="h4rl's portfolio | projects" />
-  <meta property="twitter:image" content="/assets/preview.webp" />
-
-  <meta name="robots" content="index, follow" />
-
-  <link rel="icon" type="image/webp" href="/assets/gat.webp" />
-  <link rel="canonical" href="https://h4rl.xn--q9jyb4c" />
-  <title> h4rl | projects </title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <a class="me change-to-gradient special-link" href="/"> h4rl </a>
-      <ol class="nav-list">
-        <li><a class="hyperlink" href="/blog">blog</a></li>
-        <li><a class="hyperlink" href="/projects">projects</a></li>
-        <li class="fake-hyperlink">
-          cv/resume
-          <div class="sub-nav">
-            <ol class="sub-nav-list">
-              <li><a class="hyperlink" href="/cv/eng">English</a></li>
-              <li><a class="hyperlink" href="/cv/sv">Swedish</a></li>
-            </ol>
-          </div>
-        </li>
-      </ol>
-    </nav>
-  </header>
-  <main>
-    <h1>My Projects</h1>
-    <p>(Not all projects here most likely, but my chosen favorites)</p>
-    <section>
-      <ol class="project-grid">
-        <li>
-          <a href="https://github.com/h4rldev/portfolio" target="_blank">
-            <div>
-              <h3> My portfolio! </h3>
-              <p> The current page you're viewing. <br /> Frontend implemented with plain HTML, CSS & JS with help of
-                <span class="object-of-importance">unocss</span>. <br /> Backend implemented with <span
-                  class="object-of-importance">ntex</span>
-              </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="/assets/projects/check_elevation.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/assets/projects/discord-rpc-lastfm.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/assets/projects/exmeteo.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/assets/projects/goop-studios.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/assets/projects/password-generator.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/assets/projects/qrcode-analytic.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/assets/projects/yes.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/assets/preview-imgs/index.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" type="text/css" href="/css/out/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/css/out/projects.css" />
+    <meta name="title" content="h4rl | projects" />
+    <meta name="description" content="h4rl's portfolio | projects" />
+    <meta name="keywords" content="h4rl, portfolio, html, css, js, h4rldev, h4rl.みんな, developer, rust, c">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="h4rl.xn--q9jyb4c" />
+    <meta property="og:title" content="h4rl | projects" />
+    <meta property="og:description" content="h4rl's portfolio | projects" />
+    <meta property="og:image" content="/assets/preview.webp" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="h4rl.xn--q9jyb4c" />
+    <meta property="twitter:title" content="h4rl | projects" />
+    <meta property="twitter:description" content="h4rl's portfolio | projects" />
+    <meta property="twitter:image" content="/assets/preview.webp" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/webp" href="/assets/gat.webp" />
+    <link rel="canonical" href="https://h4rl.xn--q9jyb4c" />
+    <title> h4rl | projects </title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="me change-to-gradient special-link" href="/"> h4rl </a>
+        <ol class="nav-list">
+          <li><a class="hyperlink" href="/blog">blog</a></li>
+          <li><a class="hyperlink" href="/projects">projects</a></li>
+          <li class="fake-hyperlink">
+            cv/resume
+            <div class="sub-nav">
+              <ol class="sub-nav-list">
+                <li><a class="hyperlink" href="/cv/eng">English</a></li>
+                <li><a class="hyperlink" href="/cv/sv">Swedish</a></li>
+              </ol>
             </div>
-            <img src="/assets/preview-imgs/index.webp" alt="preview of the portfolio">
-          </a>
-        </li>
-        <li>
-          <a href="https://analytic.h4rl.xn--q9jyb4c" target="_blank">
-            <div>
-              <h3> qrcode-analytic </h3>
-              <p> An analytic website made for analyzing visits everyday. <br />Frontend implemented with plain HTML,
-                CSS & JS with help of
-                <span class="object-of-importance">unocss</span>. <br /> Backend implemented with <span
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <main>
+      <h1>My Projects</h1>
+      <p>(Not all projects here most likely, but my chosen favorites)</p>
+      <section>
+        <ol class="project-grid">
+          <li>
+            <a href="https://github.com/h4rldev/portfolio" target="_blank">
+              <div>
+                <h3> My portfolio! </h3>
+                <p> The current page you're viewing. <br />
+                   Frontend implemented with plain HTML, CSS & JS with help of
+                  <span class="object-of-importance">unocss</span>. <br />
+                   Backend implemented with <span
                   class="object-of-importance">ntex</span>
-              </p>
-            </div>
-            <img src="/assets/projects/qrcode-analytic.webp" alt="preview of qrcode-analytic index page">
-          </a>
-        </li>
-        <li>
-          <a href="https://goop-studios.pages.dev" target="_blank">
-            <div>
-              <h3> Goop Studios' website </h3>
-              <p> The website I made for <span class="object-of-importance">Goop Studios</span>. <br /> Implemented with
-                help of <span class="object-of-importance">TailwindCSS</span>, <span
+                </p>
+              </div>
+              <img src="/assets/preview-imgs/index.webp" alt="preview of the portfolio">
+            </a>
+          </li>
+          <li>
+            <a href="https://analytic.h4rl.xn--q9jyb4c" target="_blank">
+              <div>
+                <h3> qrcode-analytic </h3>
+                <p> An analytic website made for analyzing visits everyday. <br />
+                  Frontend implemented with plain HTML,
+                  CSS & JS with help of
+                  <span class="object-of-importance">unocss</span>. <br />
+                   Backend implemented with <span
+                  class="object-of-importance">ntex</span>
+                </p>
+              </div>
+              <img src="/assets/projects/qrcode-analytic.webp" alt="preview of qrcode-analytic index page">
+            </a>
+          </li>
+          <li>
+            <a href="https://goop-studios.pages.dev" target="_blank">
+              <div>
+                <h3> Goop Studios' website </h3>
+                <p> The website I made for <span class="object-of-importance">Goop Studios</span>. <br />
+                   Implemented with
+                  help of <span class="object-of-importance">TailwindCSS</span>, <span
                   class="object-of-importance">Astro</span> and <span class="object-of-importance">Svelte</span> </p>
-            </div>
-            <img src="/assets/projects/goop-studios.webp" alt="preview of goop studios index page">
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/h4rldev/exmeteo" target="_blank">
-            <div>
-              <h3> exMeteo </h3>
-              <p> A CLI application for <br />getting the weather or converting one currency to another <br />
-                Implemented in
-                <span class="object-of-importance">C</span> using <span class="object-of-importance">libcurl</span> and
-                <span class="object-of-importance">jansson</span>
-              </p>
-            </div>
-            <img src="/assets/projects/exmeteo.webp" alt="preview of the help command">
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/h4rldev/discord-rpc-lastfm" target="_blank">
-            <div>
-              <h3> discord-rpc-lastfm </h3>
-              <p> An application that shows the current playing song on last.fm on discord as a game activity. <br />
-                Implemented using <span class="object-of-importance">rust</span>
-              </p>
-            </div>
-            <img src="/assets/projects/discord-rpc-lastfm.webp" alt="preview of the tool in use">
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/h4rldev/yes" target="_blank">
-            <div>
-              <h3> yes </h3>
-              <p> A reimplementation of the yes command in <span class="object-of-importance">rust</span> <br />
-                It was a bit of a <span class="object-of-importance">joke</span> project.
-              </p>
-            </div>
-            <img src="/assets/projects/yes.webp" alt="preview of the tool in use">
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/h4rldev/check_elevation" target="_blank">
-            <div>
-              <h3> check_elevation </h3>
-              <p> A rust library to check if the rust program is elevated or not. <br /> Uses <span
+              </div>
+              <img src="/assets/projects/goop-studios.webp" alt="preview of goop studios index page">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/h4rldev/exmeteo" target="_blank">
+              <div>
+                <h3> exMeteo </h3>
+                <p> A CLI application for <br />
+                  getting the weather or converting one currency to another <br />
+                  Implemented in
+                  <span class="object-of-importance">C</span> using <span class="object-of-importance">libcurl</span> and
+                  <span class="object-of-importance">jansson</span>
+                </p>
+              </div>
+              <img src="/assets/projects/exmeteo.webp" alt="preview of the help command">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/h4rldev/discord-rpc-lastfm" target="_blank">
+              <div>
+                <h3> discord-rpc-lastfm </h3>
+                <p> An application that shows the current playing song on last.fm on discord as a game activity. <br />
+                  Implemented using <span class="object-of-importance">rust</span>
+                </p>
+              </div>
+              <img src="/assets/projects/discord-rpc-lastfm.webp" alt="preview of the tool in use">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/h4rldev/yes" target="_blank">
+              <div>
+                <h3> yes </h3>
+                <p> A reimplementation of the yes command in <span class="object-of-importance">rust</span> <br />
+                  It was a bit of a <span class="object-of-importance">joke</span> project.
+                </p>
+              </div>
+              <img src="/assets/projects/yes.webp" alt="preview of the tool in use">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/h4rldev/check_elevation" target="_blank">
+              <div>
+                <h3> check_elevation </h3>
+                <p> A rust library to check if the rust program is elevated or not. <br />
+                   Uses <span
                   class="object-of-importance">windows-rs</span> </p>
-            </div>
-            <img src="/assets/projects/check_elevation.webp" alt="preview of the readme.md of the repo">
-          </a>
+              </div>
+              <img src="/assets/projects/check_elevation.webp" alt="preview of the readme.md of the repo">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/h4rldev/password-generator" target="_blank">
+              <div>
+                <h3> password-generator </h3>
+                <p> A rust library for generating a random sequence of ascii characters, with choices in extended ascii or
+                  not. </p>
+              </div>
+              <img src="/assets/projects/password-generator.webp"
+              alt="preview of the readme.md & file structure of the repo">
+            </a>
+          </li>
+        </ol>
+      </section>
+    </main>
+    <footer>
+      <ol>
+        <li>
+          <p> Made with <span class="heart"> &#10084;
+            </span> by <a href="https://github.com/h4rldev" class="change-to-gradient special-link" target="_blank"> h4rl
+            </a>
+          </p>
         </li>
         <li>
-          <a href="https://github.com/h4rldev/password-generator" target="_blank">
-            <div>
-              <h3> password-generator </h3>
-              <p> A rust library for generating a random sequence of ascii characters, with choices in extended ascii or
-                not. </p>
-            </div>
-            <img src="/assets/projects/password-generator.webp"
-              alt="preview of the readme.md & file structure of the repo">
-          </a>
+          <p> This website is <a class="hyperlink" href="https://github.com/h4rldev/portfolio" target="_blank">open
+              source</a>. </p>
         </li>
       </ol>
-    </section>
-  </main>
-  <footer>
-    <ol>
-      <li>
-        <p> Made with <span class="heart"> &#10084;
-          </span> by <a href="https://github.com/h4rldev" class="change-to-gradient special-link" target="_blank"> h4rl
-          </a>
-        </p>
-      </li>
-      <li>
-        <p> All my projects are dedicated to <span class="change-to-gradient">K</span> <span class="heart"> &#10084;
-          </span></p>
-      </li>
-      <li>
-        <p> This website is <a class="hyperlink" href="https://github.com/h4rldev/portfolio" target="_blank">open
-            source</a>. </p>
-      </li>
-    </ol>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
