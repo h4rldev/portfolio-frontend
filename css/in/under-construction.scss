@@ -1,11 +1,7 @@
 @unocss all;
 
 main {
-  @apply flex flex-col items-center;
-}
-
-h1 {
-  @apply text-puccin-text font-alata text-3xl p8;
+  @apply flex flex-col items-center p4;
 }
 
 img {
@@ -13,9 +9,6 @@ img {
 }
 
 p {
-  @apply text-puccin-text font-alata text-center p4;
-  span {
-    @apply font-jetbrains;
-  }
+  @apply text-center p4;
 }
 

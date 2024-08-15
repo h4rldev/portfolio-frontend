@@ -1,208 +1,37 @@
 @unocss all;
 
 main {
-  @apply flex flex-col justify-center items-center max-w-screen;
+  @apply text-puccin-text p4;
 }
 
-.text-and-image {
-  @apply flex w-[45%] max-w-screen flex-row items-center justify-between gap-8;
-  @apply p8 m8;
-  .image-container {
-    @apply p4 rounded-xl bg-puccin-mantle border-2 border-solid border-puccin-crust w-96 flex flex-col gap-2 font-alata text-white;
-    @apply transition-colors ease-in-out duration-300;
-    img {
-      @apply size-full border-solid border-1 border-puccin-text;
-    }
-    p {
-      @apply inline-block text-center font-jetbrains;
-    }
-  }
-  .image-container:hover {
-    @apply border-puccin-text;
-  }
-  .introduction {
-    @apply text-puccin-text font-alata;
-    @apply flex flex-col gap-4 justify-center;
-    .identity {
-      h1 {
-        @apply text-3xl;
-      }
-      p {
-        @apply text-sm;
-      }
-    }
-    .about-me {
-      @apply text-lg flex flex-col gap-8;
-      .age {
-        @apply text-puccin-teal;
-      }
-    }
-  }
+ul {
+  @apply p0 m0;
 }
 
-.skills {
-  @apply font-alata text-puccin-text w-[45%] max-w-screen m8 p8;
-  h1 {
-    @apply mb-4 text-center;
-    @apply text-3xl;
-  }
+li {
+  @apply m0 p0;
 }
 
-.stuffs {
-  @apply flex flex-row gap-4 flex-wrap w-full justify-center;
+::marker {
+  list-style-type: "◆";
+  @apply text-puccin-green;
 }
 
-.languages {
-  @apply inline-flex flex-col gap-4 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p4 text-center hover:border-puccin-text;
-  @apply transition-colors ease-in-out duration-300;
-  .language-list {
-    @apply list-none flex flex-row gap-2 flex-wrap justify-center;
-  }
-  li {
-    @apply transform transition-transform ease-in-out duration-300;
-  }
-  
-  //patch for firefox.
-  li:hover {
-    @apply scale-120;
-  }
-  
-  .c-icon {
-    @apply i-simple-icons:c w-3em h-3em text-puccin-blue;
-  }
-
-  .rust-icon {
-    @apply i-simple-icons:rust w-3em h-3em;
-  }
-
-  .html-icon {
-    @apply i-simple-icons:html5 w-3em h-3em text-puccin-peach;
-  }
-
-  .css-icon {
-    @apply i-simple-icons:css3 w-3em h-3em text-puccin-blue;
-  }
-
-  .sass-icon {
-    @apply i-simple-icons:sass w-3em h-3em text-puccin-pink;
-  }
-
-  .js-icon {
-    @apply i-simple-icons:javascript w-3em h-3em text-puccin-yellow;
-  }
-
-  .ts-icon {
-    @apply i-simple-icons:typescript w-3em h-3em text-puccin-blue;
-  }
-}
-
-.frameworks {
-  @apply inline-flex flex-col gap-4 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p4 text-center hover:border-puccin-text;
-  @apply transition-colors ease-in-out duration-300;
-  .frameworks-list {
-    @apply list-none flex flex-row gap-2 flex-wrap justify-center;
-  }
-  li {
-    @apply transform transition-transform ease-in-out duration-300;
-  }
-  
-  li:hover {
-    @apply scale-120;
-  }
-  
-  .astro-icon {
-    @apply i-simple-icons:astro w-3em h-3em;
-  }
-
-  .svelte-icon {
-    @apply i-simple-icons:svelte w-3em h-3em text-puccin-peach;
-  }
-
-  .unocss-icon {
-    @apply i-simple-icons:unocss w-3em h-3em;
-  }
-
-  .pnpm-icon {
-    @apply i-simple-icons:pnpm w-3em h-3em text-puccin-yellow;
-  }
-
-  .nodejs-icon {
-    @apply i-simple-icons:nodedotjs w-3em h-3em text-puccin-green;
-  }
-}
-
-.tools {
-  @apply inline-flex flex-col gap-4 bg-puccin-mantle border-2 border-puccin-crust border-solid rounded-2xl p4 text-center hover:border-puccin-text;
-  @apply transition-colors ease-in-out duration-300;
-
-  .tools-list {
-    @apply list-none flex flex-row gap-2 flex-wrap justify-center;
-  }
-  
-  li {
-    @apply transform transition-transform ease-in-out duration-300;
-  }
-
-  li:hover {
-    @apply scale-120;
-  }
-
-  .docker-icon {
-    @apply i-simple-icons:docker w-3em h-3em text-puccin-blue;
-  }
-
-  .neovim-icon {
-    @apply i-simple-icons:neovim w-3em h-3em text-puccin-green;
-  }
-
-  .git-icon {
-    @apply i-simple-icons:git w-3em h-3em text-puccin-red;
-  }
-
-  .github-icon {
-    @apply i-simple-icons:github w-3em h-3em;
-  }
-
-  .forgejo-icon {
-    @apply i-simple-icons:forgejo w-3em h-3em text-puccin-red;
-  }
-
-  .bash-icon {
-    @apply i-simple-icons:gnubash w-3em h-3em;
-  }
-
-  .zsh-icon {
-    @apply i-simple-icons:zsh w-3em h-3em;
-  }
-
-  .hetzner-icon {
-    @apply i-simple-icons:hetzner w-3em h-3em text-puccin-red;
-  }
-
-  .linux-icon {
-    @apply i-simple-icons:linux w-3em h-3em;
-  }
-}
-
-.certificates { 
-  @apply font-alata m8 p8;
-  h1 {
-    @apply text-3xl text-center text-puccin-text mb4;
-  }
+.certifications {
   .certificate-list {
-    @apply list-none flex gap-4 flex-wrap justify-center;
+    @apply list-none flex flex-row gap-4 m0 p4 max-w-full overflow-x-auto;
   
     li:hover {
       @apply border-puccin-text;
     }
 
     li {
-      @apply p4 border-2 border-solid border-puccin-crust bg-puccin-mantle rounded-2xl w-48;
-      @apply transition-colors ease-in-out duration-300;
+      @apply p4 border-2 border-solid border-puccin-crust bg-puccin-mantle rounded-2xl h-64 w-30;
+      @apply transition-colors ease-in-out duration-300 justify-start;
       a {
         @apply decoration-transparent;
         img {
-          @apply size-48 bg-puccin-text rounded-md;
+          @apply size-30 bg-puccin-text rounded-md;
           @apply transition-colors ease-in-out duration-300;
         }
         p {
@@ -213,63 +42,11 @@ main {
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) { 
-  .text-and-image {
-    @apply flex-col w-[75%];
-    .image-container {
-      @apply w-[95%];
-    }
-  }
-
-  .skills {
-    @apply w-[75%];
-  }
-
-  .certificates {
-    .certificate-list {
-    @apply w-[95%];
-      li {
-        @apply w-[95%];
-        a {
-          @apply flex flex-col justify-center gap-4;
-          img {
-            @apply size-full;
-          }
-        }
-      }
+.badges {
+  ul {
+    @apply list-none flex flex-row flex-wrap justify-center p0 m0 gap-2;
+    li {
+      @apply inline;
     }
   }
 }
-
-@media (min-width: 768px) and (max-width: 1299px) {
-  .text-and-image {
-    @apply flex-row w-[85%];
-    .image-container {
-      @apply w-96;
-    }
-  }
-  .skills {
-    @apply w-[75%];
-  }
-
-  .certificates {
-    @apply w-[90%];
-  }
-}
-
-@media (min-width: 1300px) {
-  .text-and-image {
-    @apply w-[45%];
-  }
-
-  .skills {
-    @apply w-[45%];
-  }
-
-  .certificates {
-    @apply w-[75%];
-  }
-}
-
-
-

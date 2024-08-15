@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preload" href="/assets/me.webp" as="image" type="image/webp" />
     <link rel="stylesheet" type="text/css" href="/css/out/layout.css" />
     <link rel="stylesheet" type="text/css" href="/css/out/index.css" />
     <meta name="title" content="h4rl | home" />
@@ -17,7 +16,7 @@
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="h4rl.xn--q9jyb4c" />
     <meta property="twitter:title" content="h4rl | home" />
-    <meta property="twitter:description" content="h4rl's portfolio | home" />
+    <meta property="twitter:description" content="Hi, I'm h4rl, and welcome to my portfolio!" />
     <meta property="twitter:image" content="/assets/preview-imgs/index.webp" />
     <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/webp" href="/assets/gat.webp" />
@@ -26,203 +25,55 @@
   </head>
   <body>
     <header>
+      <h1><span class="site">h4rl.dev</span>!</h1>
       <nav>
-        <a class="me change-to-gradient special-link" href="/"> h4rl </a>
         <ol class="nav-list">
+          <li><a class="hyperlink" href="/">home</a></li>
+          <li class="unselectable">|</li>
           <li><a class="hyperlink" href="/blog">blog</a></li>
-          <li><a class="hyperlink" href="/projects">projects</a></li>
-          <li class="fake-hyperlink">
-            cv/resume
-            <div class="sub-nav">
-              <ol class="sub-nav-list">
-                <li><a class="hyperlink" href="/cv/eng">English</a></li>
-                <li><a class="hyperlink" href="/cv/sv">Swedish</a></li>
-              </ol>
-            </div>
-          </li>
         </ol>
       </nav>
     </header>
     <main>
-      <section class="text-and-image">
-        <section class="introduction">
-          <section class="identity">
-            <h1> Hi, I'm <span class="change-to-gradient"> h4rl </span> </h1>
-            <p class="also-known"> Also known as <span class="change-to-gradient"> Oscar Sjödin Jansson. </span></p>
-          </section>
-          <section class="about-me">
-            <p>
-              A(n) <span id="age" class="age"></span> soon <span id="soon_age" class="age"></span> year old <span
-              class="object-of-importance">IT Enthusiast</span> & <span class="object-of-importance">Software
-                Developer</span> <br />
-              based
-              in Karlstad, Sweden
-              &#127480;&#127466;
-            </p>
-            <script nonce="Y9hZPQrVBZhw6dFMaWf2oQ">
-              "use strict";
-              const birth_date = new Date('2005-09-02');
-              function getYearsBetweenDates(targetDate) {
-                const now = new Date();
-                const diffDays = Math.floor((now - targetDate) / (1000 * 60 * 60 * 24));
-                const avgYearLength = 365.25; // Accounts for leap years
-                return Math.floor(diffDays / avgYearLength);
-              }
-              const age = getYearsBetweenDates(birth_date);
-              let age_element = document.getElementById('age');
-              let soon_age_element = document.getElementById('soon_age');
+      <section>
+        <p>
+          Hi, and welcome to my website! <br />
+          My name is h4rl. I am 
+          a(n) <span id="age"></span> soon <span id="soon_age"></span> year old programmer based
+          in Karlstad, Sweden. 
+          <br />
+          <br />
+          Having worked in a few langs like:
+          <ul>
+            <li>C</li>
+            <li>Rust</li>
+            <li>JavaScript (sadly)</li>
+            <li>Java</li>
+            <li>Python (sadly)</li>
+          </ul>
+          <br />
+          I also use linux, and have been for 2~ish years now, currently running NixOS on my Laptop and PC.
+        </p>
+        <script nonce="Y9hZPQrVBZhw6dFMaWf2oQ">
+          "use strict";
+          const birth_date = new Date('2005-09-02');
+          function getYearsBetweenDates(targetDate) {
+            const now = new Date();
+            const diffDays = Math.floor((now - targetDate) / (1000 * 60 * 60 * 24));
+            const avgYearLength = 365.25; // Accounts for leap years
+            return Math.floor(diffDays / avgYearLength);
+          }
+          const age = getYearsBetweenDates(birth_date);
+          let age_element = document.getElementById('age');
+          let soon_age_element = document.getElementById('soon_age');
 
-              age_element.innerText = age;
-              soon_age_element.innerText = age + 1;
-            </script>
-            <p> With a soft spot for <span class="object-of-importance">Native Software Development</span>,
-              <br />
-              especially
-              cross-platform, but I also dabble in <span class="object-of-importance">Web
-                Development</span>. <br />
-              Not much of a Designer though, more of a <span class="object-of-importance">Backend Developer</span> type of
-              person.
-            </p>
-            <p> I'm also interested in <span class="object-of-importance">PC Assembling & Repair</span> and <br />
- <span
-              class="object-of-importance"> Electronic Assembling & Repair</span> having experience in both.
-            </p>
-          </section>
-        </section>
-        <section class="image-container">
-          <img src="/assets/me.webp" alt="A picture of me" />
-          <p> <span class="change-to-gradient font-alata">Me</span> :) </p>
-        </section>
-      </section>
-      <hr id="skills" />
-      <section class="skills">
-        <h1> <a href="#skills" class="special-link" target="_self">#</a> My Skills </h2>
-        <section class="stuffs">
-          <section class="languages">
-            <h3>Languages</h3>
-            <ol class="language-list">
-              <li>
-                <a href="https://en.wikipedia.org/wiki/The_C_Programming_Language" target="_blank">
-                  <div class="c-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.rust-lang.org" target="_blank">
-                  <div class="rust-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-                  <div class="html-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                  <div class="css-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://sass-lang.com" target="_blank">
-                  <div class="sass-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-                  <div class="js-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.typescriptlang.org/" target="_blank">
-                  <div class="ts-icon"></div>
-                </a>
-              </li>
-            </ol>
-          </section>
-          <section class="frameworks">
-            <h3>Frameworks</h3>
-            <ol class="frameworks-list">
-              <li>
-                <a href="https://astro.build" target="_blank">
-                  <div class="astro-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://svelte.dev" target="_blank">
-                  <div class="svelte-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://unocss.dev" target="_blank">
-                  <div class="unocss-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://pnpm.io/" target="_blank">
-                  <div class="pnpm-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://nodejs.org/" target="_blank">
-                  <div class="nodejs-icon"></div>
-                </a>
-              </li>
-            </ol>
-          </section>
-          <section class="tools">
-            <h3>Tools</h3>
-            <ol class="tools-list">
-              <li>
-                <a href="https://www.docker.com" target="_blank">
-                  <div class="docker-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://neovim.io" target="_blank">
-                  <div class="neovim-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://git-scm.com" target="_blank">
-                  <div class="git-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com" target="_blank">
-                  <div class="github-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://git.h4rl.xn--q9jyb4c" target="_blank">
-                  <div class="forgejo-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.gnu.org/software/bash" target="_blank">
-                  <div class="bash-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.zsh.org" target="_blank">
-                  <div clasS="zsh-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://hetzner.com" target="_blank">
-                  <div class="hetzner-icon"></div>
-                </a>
-              </li>
-              <li>
-                <a href="https://linuxfoundation.org" target="_blank">
-                  <div class="linux-icon"></div>
-                </a>
-              </li>
-            </ol>
-          </section>
-        </section>
+          age_element.innerText = age;
+          soon_age_element.innerText = age + 1;
+        </script>
       </section>
       <hr />
-      <section class="certificates">
-        <h1 id="certificates"> <a href="#certificates" class="special-link" target="_self">#</a> My Certificates (in
+      <section class="certifications">
+        <h3> My Certificates (in
           order of certification)</h1>
         <ol class="certificate-list">
           <li>
@@ -305,12 +156,29 @@
           </li>
         </ol>
       </section>
+      <hr />
+      <section class="badges">
+        <ul>
+          <li><img src="/assets/badges/antinft.gif" width="88" height="31" alt="This is an Anti-NFT Site" /></li>
+          <li><img src="/assets/badges/bestvw.gif" width="88" height="31" alt="This page is best viewed with a computer and a monitor" /></li>
+          <li><img src="/assets/badges/dark-mode.gif" width="88" height="31" alt="Made for Dark Mode!"></li>
+          <li><img src="/assets/badges/dbd.gif" width="88" height="31" alt="DEFECTIVE by design, ELIMINATE DRM NOW!"></li>
+          <li><img src="/assets/badges/hetzner.gif" width="88" height="31" alt="Hosted on HETZNER"></li>
+          <li><img src="/assets/badges/itoddler.gif" width="88" height="31" alt="Stop being an iToddler"></li>
+          <li><img src="/assets/badges/kawaiibutton.gif" width="88" height="31" alt="kawaii"></li>
+          <li><img src="/assets/badges/linux_powered.gif" width="88" height="31" alt="Linux powered"></li>
+          <li><img src="/assets/badges/neovim.gif" width="88" height="31" alt="Made with neovim"></li>
+          <li><img src="/assets/badges/pgp-now.gif" width="88" height="31" alt="PGP Privacy Now!"></li>
+          <li><img src="/assets/badges/piracy.gif" width="88" height="31" alt="Piracy Now!"></li>
+          <li><img src="/assets/badges/shitify.gif" width="88" height="31" alt="Spotify: when you love music but hate artists."></li>
+        </ul>
+      </section>
     </main>
     <footer>
       <ol>
         <li>
           <p> Made with <span class="heart"> &#10084;
-            </span> by <a href="https://github.com/h4rldev" class="change-to-gradient special-link" target="_blank"> h4rl
+            </span> by <a href="https://github.com/h4rldev" class="hyperlink" target="_blank"> h4rl
             </a>
           </p>
         </li>

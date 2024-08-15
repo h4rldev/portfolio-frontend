@@ -34,8 +34,7 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts({
       fonts: {
-        alata: "Alata",
-        jetbrains: "JetBrains Mono",
+        alexandria: "Alexandria"
       },
       provider: "bunny",
     }),
