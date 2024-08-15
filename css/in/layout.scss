@@ -16,26 +16,27 @@ hr {
   @apply border-0 my-8 rounded-2xl w-1/2 h-1 bg-puccin-text;
 }
 
+nav {
+  @apply flex flex-row w-full;
+}
+
+.nav-list {
+  @apply flex flex-row list-none gap-3 text-lg font-jetbrains m0 p0;
+  li {
+    @apply flex items-center h-full; 
+  } 
+}
+
+.site {
+  @apply text-puccin-teal;
+}
+
+
 header {
   @apply flex flex-col p4;
 
   h1 {
     @apply m0 p0;
-  }
-  
-  nav {
-    @apply flex flex-row w-full;
-  }
-  
-  .nav-list {
-    @apply flex flex-row list-none gap-3 text-lg font-jetbrains m0 p0;
-    li {
-      @apply flex items-center h-full; 
-    } 
-  }
-
-  .site {
-    @apply text-puccin-teal;
   }
 }
 
@@ -52,7 +53,7 @@ header {
   @apply text-puccin-red;
 }
 
-footer { 
+footer {
   @apply flex flex-col justify-center items-center;
   ol {
     @apply list-none text-center m0 p0;
