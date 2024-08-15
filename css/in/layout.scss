@@ -54,11 +54,22 @@ header {
 }
 
 footer {
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col;
   ol {
-    @apply list-none text-center m0 p0;
-    p {
-      @apply m0 p0;
+    @apply list-none m0 p0;
+    li:not(:first-child) {
+      p {
+        @apply m0 p0;
+      }
+    }
+    li:first-child {
+      p {
+        @apply my2 p0;
+      }
+    }
+    
+    li:last-child {
+      @apply mb-2;
     }
   }
 }
