@@ -45,8 +45,8 @@ header {
 }
 
 .hyperlink {
-  @apply text-white decoration-puccin-blue hover:decoration-puccin-pink underline-2 underline-offset-2;
-  @apply transition-colors ease-in-out duration-300;
+  @apply text-white decoration-puccin-blue hover:decoration-puccin-pink underline underline-solid underline-2 underline-offset-2;
+  @apply transition-colors ease-in-out duration-300 cursor-pointer;
 }
 
 .heart {

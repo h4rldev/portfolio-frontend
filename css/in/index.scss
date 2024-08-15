@@ -12,6 +12,10 @@ li {
   @apply m0 p0;
 }
 
+.hidden-email {
+  @apply hidden;
+}
+
 ::marker {
   list-style-type: "◆";
   @apply text-puccin-green;
