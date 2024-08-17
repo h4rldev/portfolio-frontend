@@ -9,5 +9,5 @@
   postcss "css/in/{{file_arg}}.scss" -o "css/out/{{file_arg}}.css"
 
 @dev:
-  chmod +x ./portfolio-bin
-  ./portfolio-bin
+  chmod +x ./www-bin
+  ./www-bin
