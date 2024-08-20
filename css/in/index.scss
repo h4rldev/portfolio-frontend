@@ -22,15 +22,15 @@ li {
 }
 
 .certifications {
-  .certificate-list {
-    @apply list-none flex flex-row gap-4 m0 p4 max-w-full overflow-x-auto;
+  ol {
+    @apply flex flex-row gap-4 m0 p4 max-w-full overflow-x-auto;
   
     li:hover {
       @apply border-puccin-text;
     }
 
     li {
-      @apply p4 border-2 border-solid border-puccin-crust bg-puccin-mantle rounded-2xl h-64 w-30;
+      @apply p4 border-2 border-solid border-puccin-crust bg-puccin-mantle rounded-2xl h-64 w-30 list-none;
       @apply transition-colors ease-in-out duration-300 justify-start;
       a {
         @apply decoration-transparent;
