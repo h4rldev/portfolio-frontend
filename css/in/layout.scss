@@ -56,7 +56,10 @@ header {
 footer {
   @apply flex flex-col;
   ol {
-    @apply list-none m0 p0;
+    @apply m0 p0;
+    li {
+      @apply list-none; 
+    }
     li:not(:first-child) {
       p {
         @apply m0 p0;
